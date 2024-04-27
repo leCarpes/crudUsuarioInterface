@@ -7,6 +7,8 @@ function modalOpen(){
 
 function modalClose() {
     document.getElementById('modal').classList.remove('active');
+
+    window.location.reload();
 }
 
 document.getElementById('userRegistration').addEventListener('click', modalOpen);
@@ -45,6 +47,8 @@ function addUser(){
 }
 
 document.getElementById('saveValues').addEventListener('click', addUser);
+document.getElementById('cancelValues').addEventListener('click', modalClose);
+
 
 //carregar os dados do usuário
 function loadUser(){
@@ -65,10 +69,8 @@ function loadUser(){
     }else{
         createTableUser(listUser);
     }
-
-
-
 }
+
 
 window.addEventListener('DOMContentLoaded', loadUser);
 
@@ -120,6 +122,7 @@ function updateUser(id){
     document.getElementById('city').value = userData.cityUser;
     
     document.getElementById('saveValues').addEventListener('click', () => updateUserInfo(id));
+    //document.getElementById('cancelValues').addEventListener('click', modalClose)
 }
 
 
@@ -144,7 +147,7 @@ function updateUserInfo(id) {
     }
 
     modalClose();
-    window.location.reload();
+    window.location.reload();  
 }
 
 
