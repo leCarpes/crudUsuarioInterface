@@ -26,3 +26,48 @@
 .records tr:hover{
     background-color: var(--secondary-color);
 }
+
+/*---------------------------------------MOBILE---------------------------------------*/
+
+@media (max-width: 414px){
+
+    
+    .records{
+        width: 100%;
+        text-align: center;
+        border-spacing: 5px;        
+    }
+
+    .records thead{
+        display: none;
+    }
+
+    .records tr{
+        box-shadow: 0 1px 4px var(--shadow-color);
+        padding: 10px;
+    }
+
+    .records tr:hover{
+        background-color: inherit;
+    }
+
+    .records td:first-child{
+        border-collapse: collapse;
+        border: 2px solid #FFFFFF;
+        padding: 0 20px 0 10px;
+        text-align: center;
+    }
+
+    .records td:not(:first-child){
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 40px;
+    }
+
+    .records td:last-child{
+        justify-content: space-evenly;
+        padding-right: 20px;
+    }
+
+}
